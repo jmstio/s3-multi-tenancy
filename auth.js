@@ -178,15 +178,6 @@ async function listFiles(){
   });
 }
 
-/******************helpers*/
-function openTab(tabName) {
-  var i;
-  var x = document.getElementsByClassName("tab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  document.getElementById(tabName).style.display = "block";
-}
 
 function parseJwt (token) {
   var base64Url = token.split('.')[1];

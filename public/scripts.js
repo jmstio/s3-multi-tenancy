@@ -1,8 +1,4 @@
 
-function buttonFunc() {
-    alert("Button Clicked!");
-}
-
 function openTab(tabName) {
     console.log("Button " + tabName + " Clicked")
     var i;
