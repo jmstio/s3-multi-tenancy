@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cognito Demo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body { padding-top: 50px; }
+  </style>
+  <script src="/js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Cognito Auth</h1>
+    </div>
+  </div>
+  <div class="container">
+      <div class="row" style="margin-bottom: 10px;">
+        <button class="btn btn-primary" style="margin-right:10px;" onclick="openTab('signup')">Sign-up</button>
+        <button class="btn btn-primary" onclick="openTab('signin')">Sign-in</button>
+      </div>
+  </div>
+
+  <!-- <div id="signup" class="container tab">
+    <div class="w3-section">
+      <label>Name</label>
+      <input class="w3-input w3-border" type="text" id="signup_name" required>
+    </div>
+    <div class="w3-section">
+      <label>Username</label>
+      <input class="w3-input w3-border" type="text" id="signup_username" required>
+    </div>
+    <div class="w3-section">
+      <label>Email</label>
+      <input class="w3-input w3-border" type="text" id="signup_email" required>
+    </div>
+    <div class="w3-section">
+      <label>Phone</label>
+      <input class="w3-input w3-border" type="text" id="signup_phone" required>
+    </div>
+    <div class="w3-section">
+      <label>Password</label>
+      <input class="w3-input w3-border" type="password" id="signup_password" required>
+    </div>
+    <button type="submit" class="btn btn-success" onclick="signUpWithAmplify()">Sign Up</button>
+</div> -->
+
+<div class="container">
+    <form id="signup" class="tab" action="http://localhost:3000/signup" method="POST">
+        <div class="form-group">
+            <label for="exampleInputName">Name</label>
+            <input type="text" class="form-control" id="exampleInputName" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputUsername">Username</label>
+            <input type="text" class="form-control" id="exampleInputUsername" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPhoneNumber">Phone Number</label>
+            <input type="tel" class="form-control" id="exampleInputPhoneNumber" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+    </form>
+</div>
+
+<!-- <div id="signin" class="container tab" style="display:none">
+    <div class="w3-section">
+      <label>Username</label>
+      <input class="w3-input w3-border" type="text" id="signin_username" required>
+    </div>
+    <div class="w3-section">
+      <label>Password</label>
+      <input class="w3-input w3-border" type="password" id="signin_password" required>
+    </div>
+    <button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="signInWithAmplify()">Sign In</button>
+    <button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="signOut()">Sign Out</button>
+    <div class="w3-section" id="tokens">
+      <pre class="" id="idToken"></pre>
+      <pre class="" id="accessToken"></pre>
+    </div>
+</div> -->
+
+    <div class="container">
+        <form id="signin" class="tab" style="display:none" action="http://localhost:3000/signin" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail2">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" name="username">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword2">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="password">
+            </div>
+            <button type="submit" class="btn btn-success">Sign In</button>
+            <button type="submit" class="btn btn-danger">Sign Out</button>
+        </form>
+    </div>
+
+</body>
+</html>
